@@ -1,0 +1,4 @@
+interface:
+  display_name: "Documentation"
+  short_description: "Write READMEs, API docs, and code docs"
+  default_prompt: "Use $documentation to write clear project documentation."
