@@ -1,0 +1,8 @@
+# Variables locales y secretos (nunca versionar credenciales)
+.env
+.env.local
+*.pem
+
+# Herramientas / OS
+.DS_Store
+Thumbs.db

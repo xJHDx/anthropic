@@ -42,17 +42,30 @@ Para comenzar, el proyecto no necesita una aplicacion grande. La primera version
 4. Probar la habilidad con temas reales de la carrera.
 5. Mejorar las instrucciones segun los resultados.
 
+## Proyecto Órbita (triage DevOps)
+
+Base para **primera línea de incidentes** (AWS, logs, delegación): carpeta `orbita-triage/`, habilidad Claude `orbita-triage-coordinator` y script de ejemplo para CloudWatch. Detalle en [orbita-triage/README.md](orbita-triage/README.md).
+
 ## Estructura propuesta
 
 ```text
 anthropic/
   README.md
+  .gitignore
+  orbita-triage/
+    README.md
+    playbook.md
+    config/equipo.env.example
+    templates/
+    scripts/
   .claude/
     skills/
       documentation/
         SKILL.md
         agents/
           openai.yaml
+      orbita-triage-coordinator/
+        SKILL.md
       explicador-tecnico/
         SKILL.md
         ejemplos.md
@@ -98,5 +111,7 @@ A medida que avance el curso, este repositorio puede crecer con:
 Proyecto iniciado el 13 de mayo de 2026.
 
 Primera habilidad creada: `documentation`, enfocada en escribir README, documentacion de API y documentacion de codigo.
+
+Base añadida: proyecto **Órbita triage** (`orbita-triage/`) y habilidad `orbita-triage-coordinator` para incidentes con evidencia y delegación.
 
 Siguiente meta: crear una habilidad llamada `explicador-tecnico` que pueda tomar un concepto de ingenieria en sistemas y explicarlo con definicion, ejemplo practico y posibles errores comunes.

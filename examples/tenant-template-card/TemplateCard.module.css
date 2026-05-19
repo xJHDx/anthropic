@@ -1,0 +1,132 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: #2a2a2e;
+  border-radius: 12px;
+  border: 1px solid #3a3a40;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+  animation: cardEnter 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border-color: #4a4a52;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fafafa;
+}
+
+.meta {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #1f1f23;
+  color: #e5e7eb;
+  border: 1px solid #3f3f46;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.btnEditor {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  background: #facc15;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.btnEditor:hover {
+  filter: brightness(1.05);
+}
+
+.btnEditor:active {
+  transform: scale(0.98);
+}
+
+.btnDelete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  font-size: 1rem;
+  color: #fca5a5;
+  background: transparent;
+  border: 1px solid #3f3f46;
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.btnDelete:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: #7f1d1d;
+  color: #fecaca;
+}
+
+.btnDelete:focus-visible,
+.btnEditor:focus-visible {
+  outline: 2px solid #facc15;
+  outline-offset: 2px;
+}
+
+.iconPencil {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
